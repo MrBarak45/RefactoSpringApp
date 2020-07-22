@@ -22,11 +22,13 @@ public class MongoBidRepo implements BidRepository {
 
     @Override
     public Bid deleteBid(long id) {
-        return null;
+        return null;        //implem for mongodb access to database
+
     }
 
     @Override
     public Bid getBid(long id) {
-        return null;
+        return null;        //implem for mongodb access to database
+
     }
 }
