@@ -1,0 +1,21 @@
+<h1>{{item.id == null ? 'Add' : 'Edit'}} Item - {{item.id}}</h1>
+
+<form>
+  <label for="name">Name</label>
+  <input type="text" class="form-control" id="name" placeholder="Item Name" [(ngModel)]="item.name" name="name">
+
+  <label for="artist">Artist</label>
+  <input type="text" class="form-control" id="artist" placeholder="artist" name="artist" [(ngModel)]="item.artist">
+
+  <label for="artist">Price</label>
+  <input type="text" class="form-control" id="price" placeholder="price" name="price" [(ngModel)]="item.price">
+
+  <div class="form-group" *ngIf="item.id == null">
+    <!-- only show this field on adding a item -->
+    <br>
+    <input type="file" (change)="onFileChanged($event)">
+    <img [src]="imgURL" height="200" width="200" *ngIf="imgURL">
+  </div>
+  <br><br>
+  <button type="button" class="btn btn-success" (click)="saveItem()">Save Item</button>
+</form>
