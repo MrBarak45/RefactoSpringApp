@@ -3,15 +3,11 @@ package com.projetjee.infrastructure.dao.Item;
 import com.projetjee.domain.model.Bid;
 import com.projetjee.domain.model.Item;
 import com.projetjee.domain.model.User;
-import com.projetjee.domain.repository.BidRepository;
 import com.projetjee.domain.repository.ItemRepository;
-import com.projetjee.infrastructure.dao.Bid.BidAdapter;
-import com.projetjee.infrastructure.dao.Bid.MongoBid;
-import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Repository;
 
 import java.util.Date;
-
+@Repository
 public class MongoItemRepo implements ItemRepository {
     @Override
     public Item createNewItem(Item item) {

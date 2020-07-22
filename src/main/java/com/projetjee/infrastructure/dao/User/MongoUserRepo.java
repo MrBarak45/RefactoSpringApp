@@ -2,7 +2,9 @@ package com.projetjee.infrastructure.dao.User;
 
 import com.projetjee.domain.model.User;
 import com.projetjee.domain.repository.UserRepository;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class MongoUserRepo implements UserRepository {
     @Override
     public User createNewUser(User user) {
