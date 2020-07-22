@@ -15,7 +15,7 @@ public class ExpandExipryDateForItem {
         this.itemRepository = itemRepository;
     }
 
-    public void getBiddingHistoryOfItem(long id, Date date)
+    public void expandExpiryDateForItem(long id, Date date)
     {
         itemRepository.expandExpiryDateForItem(id, date);
     }
